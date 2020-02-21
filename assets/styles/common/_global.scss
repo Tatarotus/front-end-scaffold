@@ -1,0 +1,16 @@
+dialog {
+  position: relative;
+  top: 200px;
+  color: $light-black;
+  text-align: center;
+  border: none;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.25);
+  max-width: 90vw;
+
+  .hello {
+    font-size: $h2;
+  }
+}
+
