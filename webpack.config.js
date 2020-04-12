@@ -1,12 +1,12 @@
-const path = require('path');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const path = require("path");
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
-  entry: './assets/scripts/main.js',
+  mode: "development",
+  entry: "./assets/scripts/main.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js"
   },
   module: {
     rules: [
@@ -14,22 +14,22 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
+          "style-loader",
           // Translates CSS into CommonJS
-          'css-loader',
+          "css-loader",
           // Compiles Sass to CSS
-          'sass-loader',
-        ],
-      },
-    ],
+          "sass-loader"
+        ]
+      }
+    ]
   },
   plugins: [
     new BrowserSyncPlugin({
       // browse to http://localhost:3000/ during development,
       // ./public directory is being served
-      host: 'localhost',
+      host: "localhost",
       port: 3000,
-      server: { baseDir: ['dist'] }
+      server: { baseDir: ["dist"] }
     })
   ]
 };
